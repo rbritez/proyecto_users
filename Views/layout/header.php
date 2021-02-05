@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../Public/css/modal.css">
     <link rel="stylesheet" href="../../Public/css/footer.css">
 
-    <title>Document</title>
+    <title>Proyecto Usuarios</title>
 </head>
 
 <body class="container">
