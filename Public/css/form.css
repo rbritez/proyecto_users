@@ -1,0 +1,52 @@
+.form-tr{
+ text-align: center;
+ width: 70%;
+ margin:0px auto;
+ padding-top:10px;
+}
+
+.form-td{
+    padding: 0 10px 0 10px;
+    margin: 0 10px 0 10px;
+}
+.form-control{
+    margin: 5px;
+    border-color: cadetblue;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+}
+.form-tr, label{
+    text-align: left !important;
+}
+label{
+    color: white;
+    margin-left: 25px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px gray;
+}
+#form{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.5158438375350141) 0%, rgba(150,195,199,0.9668242296918768) 32%, rgba(80,139,163,1) 100%);
+    text-align: center;
+    width: 60%;
+    margin:0px auto;
+    border-radius: 10px;
+    padding: 10px 0 20px 0;
+}
+.form-footer{
+    padding: 10px 0 0 0;
+}
+#errorMessage{
+    color: brown;
+    text-align: center;
+    background-color: #F8D7DA;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    margin:0px auto;
+}
+#containerMessage{
+    margin: 10px;
+}

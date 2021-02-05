@@ -1,0 +1,17 @@
+footer{
+    text-align: center;
+}
+.footer-container{
+    position:fixed;
+    bottom:0px;
+    height:40px;
+    width:70%;
+    background:#17a2b8;
+    margin: 0 auto;
+}
+.footer-text{
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+}
+

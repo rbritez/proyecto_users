@@ -1,0 +1,98 @@
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+    font-family: Arial;
+}
+.column-right{
+    float: right;
+    width: auto;
+    background-color: darkcyan;
+}
+.title{
+    padding:10vh 0 0 0;
+    margin: 0;
+}
+
+.table{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.table th{
+    background-color: darkcyan;
+    color:white;
+}
+.table, th, td {
+    border: 1px solid cadetblue;
+    border-collapse: collapse;
+    padding-top: 10px ;
+    padding-bottom: 10px ;
+}
+
+.table td{
+    text-align: center;
+}
+
+.btn{
+    position: relative;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 16px;
+}
+
+.danger:hover{
+    cursor: pointer;
+    background-color: rgba(159, 17, 17, 0.51);
+}
+
+.danger{
+    background-color: brown;
+    color: white;
+}
+
+.default{
+    background-color: cadetblue;
+    color: white;
+}
+.default:hover{
+    cursor: pointer;
+    background-color: rgba(17, 112, 159, 0.353);
+}
+.danger:active{
+    top:2px;
+    background-color: rgba(103, 24, 24, 0.823);
+    
+    -moz-box-shadow: 0px 1px 0px 0px rgba(137, 142, 147, 0.605);
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(124, 142, 159, 0.421);
+    box-shadow: 0px 1px 0px 0px rgba(30, 59, 86, 0.326);
+}
+.default:active{
+    top:2px;
+    background-color: rgba(37, 84, 94, 0.823);
+    
+    -moz-box-shadow: 0px 1px 0px 0px rgba(137, 142, 147, 0.605);
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(124, 142, 159, 0.421);
+    box-shadow: 0px 1px 0px 0px rgba(30, 59, 86, 0.326);
+}
+.link{
+    color: white !important;
+}
+a ,.link:link {
+    text-decoration: none 
+}
+.link:hover { color: black; font-family: arial; text-decoration: none }
+.link:visited {color: black;  font-family: arial; text-decoration: none }
+*{outline:none !important;}
+*:focus {outline: none !important;}
+textarea:focus, 
+input:focus{outline: none !important;}	
+.link{text-decoration: none !important;outline: none !important;}
+.image{
+    text-align: center;
+    margin-bottom: 10px;;
+}
+.form-edit{
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
