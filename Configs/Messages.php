@@ -5,7 +5,7 @@ class Messages{
     
     const MESSAGE_USER_INFO_NO_EXIST = 'El usuario no existe.';
     const MESSAGE_USER_INFO_LOW = 'El usuario fue dado de baja.';
-    const MESSAGE_USER_FAILED_LOW = 'Usuario no se Eliminado.';
+    const MESSAGE_USER_FAILED_LOW = 'Usuario no se ah Eliminado.';
     const MESSAGE_USER_APPROVED_LOW = 'Usuario Eliminado con Exito!.';
     const MESSAGE_USER_MAX_CHARATERS = 'El nombre de usuario debe tener 5 caracteres como minimo.';
     const MESSAGE_USER_ALREADY_EXIST = 'El nombre de usuario ya existe.';
@@ -14,7 +14,7 @@ class Messages{
     const MESSAGE_USER_SEARCH_NO_EXIST = "No existe el usuario que intenta buscar.";
     const MESSAGE_USER_APPROVED_EDIT = 'Usuario Editado con Exito!.';
     const MESSAGE_USER_FAILED_EDIT = 'El Usuario no fue Editado.';
-    const MESSAGE_USER_FAILED_CREATE = 'El Usuario no se Creado.';
+    const MESSAGE_USER_FAILED_CREATE = 'El Usuario no se ah Creado.';
     const MESSAGE_USER_APPROVED_CREATE = 'Usuario Creado con Exito!.';
 
     const MESSAGE_PASSWORD_ERROR = 'Contraseña incorrecta.';
