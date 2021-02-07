@@ -87,6 +87,11 @@ switch ($_GET["option"]) {
     break;
     case 'login';
         $result = $user->login($username);
+
+        if(!$result){
+            echo json_encode(['status' => 400,'message' => 'El usuario no existe']);
+            return true;
+        }
         
         if($result['deleted_at'] != null){
             echo json_encode(['status' => 400,'message' => 'El usuario fue dado de baja']);
