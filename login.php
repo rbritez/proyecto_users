@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="Public/css/login.css">
     <title>Document</title>
 </head>
+<?php
+use Configs\Messages;
+include_once "Configs/Messages.php";
+?>
+<script type="text/javascript">
+const messageUserCharater = "<?php echo Messages::MESSAGE_USER_MAX_CHARATERS; ?>";
+const messagePasswordCharater = "<?php echo Messages::MESSAGE_PASSWORD_MAX_CHARATERS; ?>";
+</script>
 
 <body>
     <div class="login">

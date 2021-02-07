@@ -1,6 +1,10 @@
 <?php
+
+use Configs\Messages;
+
 session_start();
 require_once "../Models/Users.php";
+require_once "../Configs/Messages.php";
 
 $user = new Users();
 $userId = isset($_POST["id"]) ? $_POST["id"] : "";
@@ -89,18 +93,18 @@ switch ($_GET["option"]) {
         $result = $user->login($username);
 
         if(!$result){
-            echo json_encode(['status' => 400,'message' => 'El usuario no existe']);
+            echo json_encode(['status' => 400,'message' => Messages::MESSAGE_USER_INFO_NO_EXIST]);
             return true;
         }
         
         if($result['deleted_at'] != null){
-            echo json_encode(['status' => 400,'message' => 'El usuario fue dado de baja']);
+            echo json_encode(['status' => 400,'message' => Messages::MESSAGE_USER_INFO_LOW]);
             return true;
         }
 
         $validate = password_verify($password,$result['password']);
         if(!$validate){
-            echo json_encode(['status' => 400,'message' => 'contraseña incorrecta']);
+            echo json_encode(['status' => 400,'message' => Messages::MESSAGE_PASSWORD_ERROR]);
             return true;
         }
         

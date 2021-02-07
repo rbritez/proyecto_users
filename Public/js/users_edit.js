@@ -17,8 +17,8 @@ function showUser(id){
         if(this.readyState == 4 && this.status == 200){
             var result = JSON.parse(this.responseText);
             if(result == 0){
-                showModal('Resultado Fallido',
-                    'No existe el usuario que intenta buscar. Volver a <a href="index.php">Listado de Usuarios</a>');
+                showModal(actionResultFailed,
+                    actionUserSearch+' Volver a <a href="index.php">Listado de Usuarios</a>');
                 return false;
             }
             document.getElementById('id').value = id;
@@ -48,11 +48,11 @@ function updateUser(event){
         if(this.readyState == 4 && this.status == 200){
             var result = JSON.parse(this.responseText)
             if(result.status != 1){
-                showModal('Resultado Fallido ','Usuario no fue Editado.</br>'+result.status);
+                showModal(actionResultFailed, messageUserFaileddEdit+'</br>'+result.status);
                 return false;
             }
             console.log(result);
-            showModal('Resultado Exitoso','Usuario Editado con Exito');
+            showModal(actionResultApproved,messageUserApprovedEdit);
         }
     }
     post.send(formData)
@@ -90,7 +90,6 @@ function validatePassword(){
         if(this.readyState == 4 && this.status == 200){
             var result = JSON.parse(this.responseText);
             if(result.status != 1){
-                console.log('password false',result);
                 localStorage.setItem('statusPassword', 0);
             }else{
                 localStorage.setItem('statusPassword', 1);

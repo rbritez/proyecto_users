@@ -71,10 +71,10 @@ function storeOrUpdate(event){
             var result = JSON.parse(this.responseText)
             if(result.status != 1){
                 console.log(result.status);
-                showModal('Resultado Fallido ','Usuario no se Creado.</br>'+result.status);
+                showModal(userFailedLow,messageUserFailedCreate+'</br>'+result.status);
                 return false;
             }
-            showModal('Resultado Exitoso','Usuario Creado con Exito');
+            showModal(userApprovedLow,messageUserApprovedCreate);
         }
     }
     post.send(formData)

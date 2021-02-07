@@ -15,37 +15,37 @@ function validateForm(){
     if((password) && ((!lostPassword) || (lostPassword && lostPassword.value.length > 0))){
 
         if(password.value !== validatePassword.value){
-            message = "Las contraseñas no coinciden";
+            message = messagePaswordNoMatch;
         }
     
         if((password.value.length < 6) || (validatePassword.value.length < 6)){
-            message = "Debe ingresar una contraseña mayor a 6 digitos";
+            message = messagePasswordCharater;
         }
         
         if(lostPassword &&  localStorage.getItem("statusPassword") == 0){
-            message = "La contraseña actual ingresada es incorrecta";
+            message = messagePaswordCurrentError;
         }
     }
 
     if(email.value.length > 0 && !emailRegex.test(email.value)){    
-        message = "El formato del email ingresado es incorrecto";
+        message = messageEmailFormatError;
     }
 
     if(userame.value.length < 5){
-        message = 'El nombre de usuario debe tener 5 caracteres como minimo';
+        message = messageUserCharater;
     }
     
     res = localStorage.getItem("statusUsername");
     if(res == 0){
-        message = 'El nombre de usuario ya existe';
+        message = messageUserAlreadyExist;
     }
 
     if(lastName.value.length < 3){
-        message = 'El apellido debe tener 3 caracteres como minimo';
+        message = messageUserLastnameMaxCharater;
     }
 
     if(firstName.value.length < 3 ){
-        message = 'El nombre debe tener 3 caracteres como minimo';
+        message = messageUserFirstnameMaxCharater;
     }
 
     if(message != ''){
@@ -114,10 +114,10 @@ function deleteUser(id){
             var result = JSON.parse(this.responseText);
 
             if(result.status != 1){
-                showModal('Resultado Fallido ','Usuario no se Eliminado.</br>'+result.status);
+                showModal(actionResultFailed, userFailedLow+'</br>'+result.status);
                 return false;
             }
-            showModal('Resultado Exitoso','Usuario Eliminado con Exito');
+            showModal(actionResultApproved,userApprovedLow);
         }
     }
     post.send(formData);

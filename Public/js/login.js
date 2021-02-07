@@ -45,11 +45,11 @@ function validateForm(){
     //validacion de nombres
 
     if((password.value.length < 6)){
-        message = "Debe ingresar una contraseña mayor a 6 digitos";
+        message = messagePasswordCharater;
     }
 
     if(userame.value.length < 5){
-        message = 'El nombre de usuario debe tener 5 caracteres como minimo';
+        message = messageUserCharater;
     }
 
     if(message != ''){
